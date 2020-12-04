@@ -67,10 +67,10 @@ inquirer.prompt([
           return "Please enter a valid email address";
         }
       }
-]).then(responses => {
-    const manager = new Manager(reponses.managerName, responses.managerID, responses.managerEmail, responses.managerPhone )
+]).then(res => {
+    const manager = new Manager(res.managerName, res.managerID, res.managerEmail, res.managerPhone )
     teamMemberArray.push(manager)
-    idArray.push(responses.managerID)
+    idArray.push(res.managerID)
     createTeam()
 })
 
@@ -155,10 +155,10 @@ function addEngineer(){
                 return "Please enter at least one character";
               }
           }
-    ]).then(responses => {
-        const engineer = new Engineer(reponses.engineerName, responses.engineerID, responses.engineerEmail, responses.engineerPhone )
+    ]).then(res => {
+        const engineer = new Engineer(res.engineerName, res.engineerID, res.engineerEmail, res.engineerPhone )
         teamMemberArray.push(engineer)
-        idArray.push(responses.engineerID)
+        idArray.push(res.engineerID)
         createTeam()
 })}
 
@@ -204,7 +204,7 @@ function addIntern(){
           {
             type: "input",
             name: "internSchool",
-            message: "What is the manager office number?",
+            message: "What is the intern school name?",
             validate: answer => {
                 if (answer !== "") {
                   return true;
@@ -212,10 +212,10 @@ function addIntern(){
                 return "Please enter at least one character";
               }
           }
-    ]).then(responses => {
-        const intern = new Engineer(reponses.managerName, responses.managerID, responses.managerEmail, responses.managerPhone )
-        teamMemberArray.push(manager)
-        idArray.push(responses.managerID)
+    ]).then(res => {
+        const intern = new Intern(res.internName, res.internID, res.internEmail, res.internSchool )
+        teamMemberArray.push(intern)
+        idArray.push(res.internID)
         createTeam()
 })}
 
