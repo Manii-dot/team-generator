@@ -12,6 +12,12 @@ Application needed to prompt the following:
 2. information about the team engineer
 3. information about the team intern
 
+## Deployed Link 
+* [YouTube Link](https://www.youtube.com/watch?v=lL0pku6OZ_0&feature=youtu.be)
+
+
+## Screenshot of outcome
+![usage](asset/sc.png)
 
 ## Installation
 npm install
